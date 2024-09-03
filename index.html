@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Bot Setup</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="bot-title">Fandom Bot Generator</h2>
+        <p class="bot-description">Generates a bot for a BlueSky Fandom Account.<br>
+            Usually meant to post daily media quotes.<br>Please read <a href="https://bsky.social/about/support/tos">BlueSky's TOS</a> before making a Bot.</p><br>
+    <form action="/setup" method="post" enctype="multipart/form-data">
+        <label for="username">Bluesky Username:</label></br>
+        <input class="typeable" type="text" id="username" name="username" required><br><br>
+        <label for="password">Bluesky's App Password (Do not use your account's main password! Generate an App Password <a href="https://bsky.app/settings/app-passwords">here</a>):</label></br>
+        <input class="typeable" type="password" id="password" name="password" required><br><br>
+        <label for="quotes">Quotes File:</label>
+        <p>Note: Upload a .txt file (you can make one easily in your notepad) containing all of the quotes you want to feed the bot, </br> 
+        one per line, never above 300 characters each. Name it <strong>quotes.txt</strong>, all lowercase, or else the bot won't work. <a href="./quotes.txt">Here's an example.</a></p>
+        <input class="buttons" type="file" id="quotes" name="quotes" accept=".txt" required><br><br>
+        <label for="interval">Post Interval:</label><br>
+        <select class="typeable">
+            <option value="3600000">Every 1 hour</option>
+            <option value="7200000">Every 2 hours</option>
+            <option value="10800000">Every 3 hours</option>
+            <option value="21600000">Every 6 hours</option>
+            <option value="43200000">Every 12 hours</option>
+            <option value="86400000">Every 1 day</option>
+        </select><br><br>
+        <button class="buttons" type="submit">Setup Bot</button>
+    </form>
+</div>
+</body>
+</html>

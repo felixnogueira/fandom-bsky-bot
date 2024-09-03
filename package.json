@@ -1,7 +1,7 @@
 {
   "name": "songofsongs-bot-bsky",
   "version": "1.0.0",
-  "description": "",
+  "description": "forked from the Song of Songs Bot!",
   "main": "index.js",
   "scripts": {
     "start": "ts-node-esm index.ts"
@@ -11,8 +11,10 @@
   "type": "module",
   "license": "ISC",
   "dependencies": {
-    "@atproto/api": "^0.2.5",
-    "dotenv": "^16.0.3"
+    "@atproto/api": "^0.2.11",
+    "@skyware/bot": "^0.3.2",
+    "cron": "^3.1.7",
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

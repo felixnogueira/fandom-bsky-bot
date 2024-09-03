@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    
+}
+
+body {
+    padding: 10px;
+    min-width: 400px;
+    margin: auto;
+    width: 50%;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: white;
+}
+
+.container {
+    max-width: fit-content;
+    background-color: rgb(103, 100, 118);
+    color: whitesmoke;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.bot-title, .bot-description, form {
+    font-family: kanit;
+}
+
+.typeable, button, input::file-selector-button  {
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 5px;
+    font-family: Poppins;
+}
+
+select:hover {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+
+
